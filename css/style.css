@@ -1,0 +1,129 @@
+/* Reset */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+a,
+hr,
+figure {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+:root {
+  --dark-cyan-clr: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue-clr: hsl(229, 23%, 23%);
+  --dark-grayish-blue-clr: hsl(227, 10%, 46%);
+  --dark-gray-clr: hsl(0, 0%, 59%);
+  --white-clr: hsl(0, 0%, 100%);
+  --fs: 18px;
+  --primary-ff: "Kumbh Sans", sans-serif;
+}
+
+body {
+  font-family: var(--primary-ff);
+  font-size: var(--fs);
+  min-height: 100vh;
+  background: url(../img/bg-pattern-top.svg) no-repeat top left/500px 500px,
+    url(../img/bg-pattern-bottom.svg) no-repeat bottom right/500px 500px
+      var(--dark-cyan-clr);
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card */
+
+.card {
+  width: 500px;
+  height: 500px;
+  background-color: var(--white-clr);
+  border-radius: 1rem;
+}
+
+.bg-image {
+  height: 40%;
+  background-image: url(../img/bg-pattern-card.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-radius: 1rem 1rem 0 0;
+  margin-bottom: 80px;
+}
+
+figure {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  translate: -50% 50%;
+}
+
+figure img {
+  border-radius: 50%;
+  border: 5px solid var(--white-clr);
+}
+
+.info {
+  padding-bottom: 50px;
+  border-bottom: 1px solid hsla(0, 0%, 59%, 0.2);
+}
+
+.name {
+  color: var(--very-dark-desaturated-blue-clr);
+  margin-right: 10px;
+  font-weight: 700;
+}
+
+.age {
+  color: var(--dark-grayish-blue-clr);
+}
+
+.text {
+  color: var(--dark-gray-clr);
+}
+
+.number {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.letter-space {
+  letter-spacing: 3px;
+}
+
+/* Media Queries */
+
+@media all and (max-width: 414px) {
+  .card {
+    margin: 0px 1rem;
+  }
+}
